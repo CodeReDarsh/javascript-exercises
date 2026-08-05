@@ -22,4 +22,13 @@ describe("sumAll", () => {
   test("returns ERROR with non-number parameters", () => {
     expect(sumAll(10, [90, 1])).toEqual("ERROR");
   });
+  test("returns ERROR with NaN", () => {
+    expect(sumAll(10, NaN)).toEqual("ERROR");
+  });
+  test("returns ERROR with undefined", () => {
+    expect(sumAll(10, undefined)).toEqual("ERROR");
+  });
+  test("returns ERROR with null", () => {
+    expect(sumAll(10, null)).toEqual("ERROR");
+  });
 });
